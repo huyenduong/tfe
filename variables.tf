@@ -2,43 +2,34 @@ variable "subscription_id" {}
 variable "client_id" {}
 variable "client_secret" {}
 variable "tenant_id" {}
+variable "htduong01_aws_access_key" {}
+variable "htduong01_aws_secret_key" {}
+variable "htduong01_profile" {}
 
-variable "rgName" {
-  default = "tfRG"
-  description = "resource group created by Terraform"
-}
-
-variable "location" {
-  default = "westus"
-  description = "West US" 
-}
-
-variable "nsgName" {
-  default = "nsg1"
-  description = "West US" 
-}
-
-variable "vnetName" {
-  default = "vnet1"
-  description = "vnet1"   
-}
-
-variable "subnetName" {
-  default = "subnet1"
-  description = "subnet1"   
-}
-
-variable "admin_username" {
+variable "aws_default_region" {
   type = string
-  default = "huyen"
+  default = "ap-southeast-2"
+  
 }
 
-variable "admin_password" {
+variable "ubuntu_ami" {
   type = string
-  default = "123Cisco123!"  
+  default = "ami-041e1cc8f4c429789"
 }
 
-variable "vmName" {
+variable "myvar" {
   type = string
-  default = "epg1-01"
+  default ="hello terraform"
+}
+
+variable "mymap" {
+  type = map(string)
+  default = {
+    mykey = "my value"
+  } 
+}
+
+variable "mylist" {
+  type = list
+  default = [1,2,3]
 }

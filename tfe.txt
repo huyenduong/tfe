@@ -1,0 +1,11 @@
+## create a simple web-server
+#!/bin/bash
+echo "Hello, World" > index.html
+nohup busybox httpd -f -p 8080 &
+
+
+# using environment variable
+We can set environment variable using
+export TF_VAR_name_of_var=value
+
+must add TF_VAR first
